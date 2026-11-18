@@ -62,7 +62,7 @@ California suing OpenAI, NYC disbanding the NYPD Strategic Response Group, NSANe
     - AP summary (above); https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html
     - https://www.wistv.com/2026/11/17/another-wipeout-hits-wall-street-nvidia-other-jittery-ai-stocks-swing-lower/ (AP)
 11. **Mongolia:** President Khurelsukh says he will resign over a $25m railway bribe claim he denies. — https://www.justsecurity.org/164914/early-edition-november-17-2026/ (AP)
-12. **COP31 (Antalya):** tensions over the draft deal; EU envoy says text could make talks "untenable". — https://www.yahoo.com/news/science/articles/tensions-rise-over-draft-climate-204029559.html
+12. **COP31 (Antalya):** tensions over the draft deal; EU envoy says text could make talks "untenable"; talks close Friday. — https://www.yahoo.com/news/science/articles/tensions-rise-over-draft-climate-204029559.html
 13. **Bangladesh (promoted, new).** 17 Nov: police fired tear gas and sound grenades at garment workers blocking
     highways in Gazipur and Savar-Ashulia; workers demand a Tk30,000 monthly minimum wage; 57 Gazipur factories closed.
     - https://www.tbsnews.net/bangladesh/garment-workers-block-dhaka-mymensingh-highway-gazipur-attempt-road-blockade-savar (17 Nov)
