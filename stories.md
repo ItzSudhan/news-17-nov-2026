@@ -60,6 +60,6 @@ a reported James Bond casting (only rumours), the Vulcan/Amazon launch failure (
 32. Haitians rally in support of El Salvador's anti-gang troop deployment. — Al Jazeera
 33. New York: Mayor Mamdani disbands NYPD Strategic Response Group. — Just Security (WSJ)
 34. Air Niugini resumes direct Port Moresby–Auckland flights after 26 years. — https://www.rnz.co.nz/news/pacific/2638396/pacific-news-in-brief-for-17-november
-35. AFCON 2027 qualifying: Togo 3–0 Algeria; Tunisia 1–1 Libya. — https://www.riotimesonline.com/latin-america-sports-daily-tuesday-november-17-2026
+35. AFCON 2027 qualifying: Ethiopia 1–0 Mozambique (also Burundi 1–1 Zambia). — https://supersport.com/football/news/fcbfd4cd-2a67-41e0-be6b-a2ecea7dacf9/afcon-qualifiers-fixtures-results-groups-and-broadcast-details ; https://www.nbcsports.com/soccer/news/afcon-qualifying-2026-africa-cup-of-nations-qualification-format-schedule-scores
 
 Regions: Europe, Middle East, Asia, Africa, North America, South America (Ecuador, Bolivia), Oceania.
