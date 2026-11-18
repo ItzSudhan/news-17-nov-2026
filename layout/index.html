@@ -94,21 +94,27 @@
 
   /* ---------- cards ---------- */
   .cards {
-    position: absolute; left: 14px; top: 428px; width: 996px; height: 348px;
-    display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); gap: 6px;
+    position: absolute; left: 14px; top: 428px; width: 996px; height: 396px;
+    display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr); gap: 6px;
   }
   .card {
     background: #fff; border: 1px solid var(--rule); border-left-width: 5px;
-    display: flex; padding: 8px 8px 6px 7px; gap: 8px; overflow: hidden;
+    display: flex; overflow: hidden;
   }
-  .card svg { width: 40px; height: 40px; flex: none; margin-top: 1px; }
-  .card .body { min-width: 0; }
+  .card .pic { position: relative; width: 130px; height: 100%; flex: none; }
+  .card .pic svg { display: block; width: 130px; height: 100%; }
+  .card .loc {
+    position: absolute; left: 3px; bottom: 3px; background: rgba(17,21,28,0.86); color: #fff;
+    font-family: "Avenir Next Condensed", sans-serif; font-weight: 700; font-size: 9.5px;
+    letter-spacing: 0.5px; text-transform: uppercase; padding: 1px 4px 0; border-radius: 2px; line-height: 1.3;
+  }
+  .card .body { min-width: 0; padding: 6px 7px 0 9px; }
   .card .top { display: flex; align-items: center; }
   .card h3 {
     font-family: "Avenir Next Condensed", sans-serif; font-weight: 800;
-    font-size: 17.5px; line-height: 1.02; margin-top: 5px;
+    font-size: 16.5px; line-height: 1.0; margin-top: 4px;
   }
-  .card p { font-size: 11.2px; line-height: 1.26; margin-top: 4px; color: #3a3a3a; }
+  .card p { font-size: 11px; line-height: 1.2; margin-top: 3px; color: #3a3a3a; }
   .card.eu { border-left-color: var(--eu); } .card.me { border-left-color: var(--me); }
   .card.as { border-left-color: var(--as); } .card.af { border-left-color: var(--af); }
   .card.am { border-left-color: var(--am); } .card.gl { border-left-color: var(--gl); }
@@ -116,21 +122,25 @@
 
   /* ---------- bottom: map + also ---------- */
   .map {
-    position: absolute; left: 14px; top: 784px; width: 420px; height: 212px;
+    position: absolute; left: 14px; top: 832px; width: 264px; height: 164px;
     background: #dfe8ef; border: 1px solid var(--rule); overflow: hidden;
   }
-  .map svg { display: block; }
+  .map svg { display: block; margin-top: 4px; }
+  .map .cap {
+    font-family: "Avenir Next Condensed", sans-serif; font-weight: 700; font-size: 10.5px;
+    color: #4a5360; padding: 6px 0 0 6px; line-height: 1.15;
+  }
   .also {
-    position: absolute; left: 444px; top: 784px; width: 566px; height: 212px;
-    background: #fff; border: 1px solid var(--rule); padding: 7px 10px; overflow: hidden;
+    position: absolute; left: 286px; top: 832px; width: 724px; height: 164px;
+    background: #fff; border: 1px solid var(--rule); padding: 6px 10px; overflow: hidden;
   }
   .also h4 {
-    font-family: "Avenir Next Condensed", sans-serif; font-weight: 800; font-size: 14px;
-    letter-spacing: 2px; text-transform: uppercase; border-bottom: 2px solid var(--ink); padding-bottom: 2px;
+    font-family: "Avenir Next Condensed", sans-serif; font-weight: 800; font-size: 13.5px;
+    letter-spacing: 2px; text-transform: uppercase; border-bottom: 2px solid var(--ink); padding-bottom: 1px;
   }
-  .also ul { list-style: none; columns: 2; column-gap: 14px; margin-top: 6px; }
+  .also ul { list-style: none; columns: 3; column-gap: 12px; margin-top: 4px; }
   .also li {
-    font-size: 11px; line-height: 1.2; padding: 1.7px 0 1.7px 10px; position: relative;
+    font-size: 10.6px; line-height: 1.17; padding: 0.7px 0 0.7px 10px; position: relative;
     break-inside: avoid; white-space: nowrap;
   }
   .also li::before {
@@ -156,7 +166,7 @@
   </div>
   <div class="row2">
     <div class="date">Tuesday 17 November 2026</div>
-    <div class="count"><b>35</b> STORIES<br><b>6</b> CONTINENTS</div>
+    <div class="count"><b>42</b> STORIES<br><b>6</b> CONTINENTS</div>
   </div>
 </header>
 
@@ -339,127 +349,280 @@
 <!-- ============ CARDS ============ -->
 <section class="cards">
 
+  <!-- 4 Ebola -->
+  <div class="card af">
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="132" height="90" fill="#e6efe1"/>
+      <path d="M0 50 Q34 38 70 48 T132 44 V90 H0 Z" fill="#8fbf6f"/>
+      <path d="M0 66 Q40 60 132 68 V90 H0 Z" fill="#b98a5a"/>
+      <path d="M4 47 L40 26 L76 47 Z" fill="#dfe6e8" stroke="#7c8b8f"/>
+      <rect x="8" y="47" width="64" height="25" fill="#fff" stroke="#7c8b8f"/>
+      <rect x="22" y="37" width="36" height="9" rx="1" fill="#c62f3a"/>
+      <text x="40" y="44.3" font-family="Avenir Next Condensed, sans-serif" font-weight="800" font-size="8" fill="#fff" text-anchor="middle">EBOLA</text>
+      <rect x="40" y="54" width="13" height="18" fill="#2e3b33"/>
+      <rect x="15" y="56" width="12" height="3.5" fill="#c62f3a"/><rect x="19.25" y="51.75" width="3.5" height="12" fill="#c62f3a"/>
+      <rect x="107" y="42" width="7" height="17" rx="3" fill="#9aa3a8"/>
+      <path d="M88 44 Q98 38 108 44 L110 67 H86 Z" fill="#f2c531"/>
+      <circle cx="98" cy="34" r="8" fill="#f2c531"/>
+      <rect x="92" y="31" width="12" height="6" rx="2" fill="#2d4f73"/>
+      <rect x="94" y="37.5" width="8" height="3" rx="1" fill="#fff"/>
+      <rect x="88" y="66" width="8" height="11" fill="#e0b52a"/><rect x="100" y="66" width="8" height="11" fill="#e0b52a"/>
+      <rect x="87" y="76" width="10" height="5" fill="#2e8b57"/><rect x="99" y="76" width="10" height="5" fill="#2e8b57"/>
+      <path d="M89 48 L81 58" stroke="#f2c531" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="81" cy="58" r="3" fill="#2e8b57"/><path d="M81 58 L73 62" stroke="#555" stroke-width="2"/>
+      <g fill="#cfe6f5"><circle cx="70" cy="62" r="1.6"/><circle cx="67" cy="65" r="1.3"/><circle cx="68" cy="59" r="1.1"/></g>
+    </svg><span class="loc">DR Congo</span></div>
+    <div class="body"><div class="top"><span class="num">4</span><span class="tag af">Africa · Health</span></div>
+      <h3>Ebola outbreak doubles in three months</h3>
+      <p>WHO: 11,000+ cases and 5,400 deaths in 8 provinces</p></div>
+  </div>
+
+  <!-- 5 Kyiv bridges -->
+  <div class="card eu">
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="kv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2a4a"/><stop offset="1" stop-color="#e2814a"/></linearGradient></defs>
+      <rect width="132" height="62" fill="url(#kv)"/>
+      <rect y="60" width="132" height="30" fill="#1d3550"/>
+      <g stroke="#e2814a" stroke-opacity="0.4" stroke-width="1.2"><line x1="40" y1="70" x2="70" y2="70"/><line x1="48" y1="78" x2="66" y2="78"/></g>
+      <path d="M0 62 V44 Q14 40 26 46 L30 62 Z" fill="#2a2f3d"/>
+      <rect x="9" y="34" width="8" height="10" fill="#e9e1cf"/><path d="M9 34 Q13 25 17 34 Z" fill="#e8b62c"/><path d="M13 26 V21" stroke="#e8b62c" stroke-width="1"/>
+      <g fill="#141a24">
+        <rect x="20" y="54" width="112" height="4"/>
+        <path d="M86 58 L90 16 L94 58 Z"/>
+        <rect x="34" y="58" width="4" height="8"/><rect x="62" y="58" width="4" height="8"/><rect x="118" y="58" width="4" height="8"/>
+      </g>
+      <g stroke="#141a24" stroke-width="0.9"><line x1="90" y1="19" x2="36" y2="54"/><line x1="90" y1="23" x2="52" y2="54"/><line x1="90" y1="28" x2="70" y2="54"/><line x1="90" y1="19" x2="131" y2="54"/><line x1="90" y1="23" x2="118" y2="54"/><line x1="90" y1="28" x2="106" y2="54"/></g>
+      <g fill="#2b2b33" opacity="0.9"><circle cx="54" cy="40" r="7"/><circle cx="48" cy="30" r="8"/><circle cx="42" cy="19" r="8"/><circle cx="34" cy="11" r="7"/></g>
+      <circle cx="56" cy="52" r="12" fill="#ffb347" opacity="0.55"/>
+      <path d="M48 55 Q51 42 55 50 Q58 38 62 55 Z" fill="#ff7b22"/><path d="M52 55 Q55 47 58 55 Z" fill="#ffd25a"/>
+      <path d="M128 4 L104 22" stroke="#fff" stroke-opacity="0.75" stroke-width="1.4" stroke-dasharray="3 2"/>
+      <path d="M104 22 l-6 5 l2.5 -6 z" fill="#fff"/>
+    </svg><span class="loc">Kyiv</span></div>
+    <div class="body"><div class="top"><span class="num">5</span><span class="tag eu">Europe · Ukraine war</span></div>
+      <h3>Russian missiles target Kyiv's bridges</h3>
+      <p>Both Dnipro crossings shut after overnight strikes</p></div>
+  </div>
+
+  <!-- 6 Gaza -->
   <div class="card me">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#fbe9dc"/>
-      <path d="M8 36 L38 36 L38 33 L8 33 Z" fill="#d9661f"/><path d="M10 33 L10 20 M17 33 L17 20 M24 33 L24 20 M31 33 L31 20 M36 33 L36 20" stroke="#d9661f" stroke-width="3"/>
-      <path d="M7 19 L23 9 L39 19 Z" fill="#d9661f"/></svg>
-    <div class="body"><div class="top"><span class="num">4</span><span class="tag me">Israel</span></div>
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="132" height="90" fill="#b9bec6"/>
+      <path d="M0 54 V30 H10 V24 H18 L22 30 V36 H30 V22 L36 26 L40 20 V54 Z" fill="#8c8780"/>
+      <path d="M78 54 V34 L84 30 V26 H96 V36 L100 32 H108 V28 L114 24 V36 H124 V30 H132 V54 Z" fill="#8c8780"/>
+      <g fill="#5d5953"><rect x="4" y="36" width="4" height="4"/><rect x="14" y="34" width="4" height="4"/><rect x="32" y="30" width="4" height="4"/><rect x="88" y="34" width="4" height="4"/><rect x="104" y="38" width="4" height="4"/><rect x="118" y="40" width="4" height="4"/></g>
+      <rect y="53" width="132" height="37" fill="#cdb894"/>
+      <ellipse cx="62" cy="83" rx="18" ry="3.5" fill="#8fa6b6"/><ellipse cx="112" cy="80" rx="14" ry="3" fill="#8fa6b6"/>
+      <path d="M2 68 L13 53 L24 68 Z" fill="#f2f2ee"/><path d="M26 68 L38 51 L50 68 Z" fill="#6c9cc4"/>
+      <path d="M52 68 L63 53 L74 68 Z" fill="#f2f2ee"/><path d="M76 68 L88 52 L100 68 Z" fill="#e7dcc2"/><path d="M102 68 L114 53 L126 68 Z" fill="#6c9cc4"/>
+      <path d="M70 79 L84 60 L98 79 Z" fill="#f7f7f2"/><path d="M100 76 L112 61 L124 76 Z" fill="#e9e9e2"/>
+      <g fill="#3d3a36"><path d="M12 68 L13 60 L14 68 Z"/><path d="M37 68 L38 59 L39 68 Z"/><path d="M62 68 L63 60 L64 68 Z"/><path d="M83 79 L84 68 L85 79 Z"/><path d="M111 76 L112 67 L113 76 Z"/></g>
+      <g stroke="#6f7a88" stroke-width="0.8" opacity="0.8">
+        <line x1="10" y1="2" x2="6" y2="12"/><line x1="26" y1="8" x2="22" y2="18"/><line x1="46" y1="4" x2="42" y2="14"/><line x1="86" y1="6" x2="82" y2="16"/>
+        <line x1="104" y1="2" x2="100" y2="12"/><line x1="122" y1="10" x2="118" y2="20"/><line x1="60" y1="24" x2="56" y2="34"/><line x1="70" y1="36" x2="66" y2="46"/>
+        <line x1="18" y1="40" x2="14" y2="50"/><line x1="96" y1="40" x2="92" y2="50"/><line x1="50" y1="38" x2="46" y2="48"/>
+      </g>
+      <g fill="#11151c"><ellipse cx="66" cy="13" rx="9" ry="1.6"/><path d="M64 13 L60 7 H63 L68 13 L63 19 H60 Z"/><path d="M57 13 L55 10 H57 L59 13 L57 16 H55 Z"/></g>
+    </svg><span class="loc">Gaza Strip</span></div>
+    <div class="body"><div class="top"><span class="num">6</span><span class="tag me">Middle East · Gaza</span></div>
+      <h3>Gaza truce: six killed by Israeli fire, officials say</h3>
+      <p>A boy, 6, among them; Israel says it hit "terrorists"</p></div>
+  </div>
+
+  <!-- 7 Israel -->
+  <div class="card me">
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="132" height="90" fill="#cfe3f0"/>
+      <rect y="64" width="132" height="26" fill="#9db27a"/>
+      <rect x="10" y="32" width="114" height="6" fill="#c9b78f"/>
+      <rect x="14" y="38" width="106" height="28" fill="#e3d4b0"/>
+      <g fill="#b39d72"><rect x="18" y="40" width="3.5" height="26"/><rect x="26" y="40" width="3.5" height="26"/><rect x="34" y="40" width="3.5" height="26"/><rect x="42" y="40" width="3.5" height="26"/><rect x="50" y="40" width="3.5" height="26"/><rect x="58" y="40" width="3.5" height="26"/><rect x="66" y="40" width="3.5" height="26"/><rect x="74" y="40" width="3.5" height="26"/><rect x="82" y="40" width="3.5" height="26"/><rect x="90" y="40" width="3.5" height="26"/><rect x="98" y="40" width="3.5" height="26"/><rect x="106" y="40" width="3.5" height="26"/><rect x="114" y="40" width="3.5" height="26"/></g>
+      <line x1="7" y1="5" x2="7" y2="66" stroke="#555" stroke-width="1.3"/>
+      <rect x="8" y="6" width="26" height="17" fill="#fff" stroke="#c9c9c9" stroke-width="0.5"/>
+      <rect x="8" y="8" width="26" height="2.4" fill="#1f4fa0"/><rect x="8" y="18.6" width="26" height="2.4" fill="#1f4fa0"/>
+      <path d="M21 11.3 L24 16.6 H18 Z M21 18 L18 12.8 H24 Z" fill="none" stroke="#1f4fa0" stroke-width="0.8"/>
+      <rect x="66" y="4" width="60" height="22" rx="2" fill="#11151c"/>
+      <text x="96" y="19.5" font-family="Avenir Next Condensed, sans-serif" font-weight="800" font-size="13" fill="#f2b134" text-anchor="middle">66 VOTES</text>
+    </svg><span class="loc">Knesset, Jerusalem</span></div>
+    <div class="body"><div class="top"><span class="num">7</span><span class="tag me">Israel · Politics</span></div>
       <h3>Netanyahu foes take the Knesset chair</h3>
       <p>Eisenkot ally Matan Kahana elected speaker with 66 votes</p></div>
   </div>
 
-  <div class="card as">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#f8e0e2"/>
-      <rect x="11" y="9" width="24" height="30" rx="2" fill="#fff" stroke="#c62f3a" stroke-width="2"/>
-      <path d="M15 16 H31 M15 21 H31 M15 26 H26" stroke="#c62f3a" stroke-width="2"/>
-      <path d="M22 33 q4 -5 9 0" stroke="#11151c" stroke-width="2" fill="none"/></svg>
-    <div class="body"><div class="top"><span class="num">5</span><span class="tag as">Mongolia</span></div>
-      <h3>President Khurelsukh says he will resign</h3>
-      <p>Ex-mayor alleges a $25m railway bribe; he denies it</p></div>
+  <!-- 8 Serbia -->
+  <div class="card eu">
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="132" height="90" fill="#f3ede2"/>
+      <g font-family="Avenir Next Condensed, sans-serif" font-weight="800" font-size="10">
+        <text x="5" y="14" fill="#2f5fb3">STUDENTS 140</text><text x="127" y="14" fill="#c62f3a" text-anchor="end">VUČIĆ 103</text>
+      </g>
+      <g transform="translate(2,-4)">
+        <g fill="#2f5fb3"><circle cx="46.0" cy="72.0" r="2.7"/><circle cx="39.0" cy="72.0" r="2.7"/><circle cx="32.0" cy="72.0" r="2.7"/><circle cx="25.0" cy="72.0" r="2.7"/><circle cx="25.7" cy="64.4" r="2.7"/><circle cx="32.9" cy="64.3" r="2.7"/><circle cx="40.2" cy="64.3" r="2.7"/><circle cx="28.0" cy="57.1" r="2.7"/><circle cx="47.8" cy="64.2" r="2.7"/><circle cx="35.7" cy="57.1" r="2.7"/><circle cx="31.6" cy="50.3" r="2.7"/><circle cx="43.8" cy="57.3" r="2.7"/><circle cx="40.0" cy="50.8" r="2.7"/><circle cx="36.4" cy="44.4" r="2.7"/><circle cx="52.8" cy="57.9" r="2.7"/><circle cx="49.3" cy="51.8" r="2.7"/><circle cx="45.8" cy="45.7" r="2.7"/><circle cx="42.3" cy="39.6" r="2.7"/><circle cx="49.1" cy="36.0" r="2.7"/><circle cx="52.7" cy="42.1" r="2.7"/><circle cx="56.3" cy="48.2" r="2.7"/><circle cx="60.0" cy="54.5" r="2.7"/><circle cx="56.4" cy="33.7" r="2.7"/><circle cx="60.1" cy="40.2" r="2.7"/><circle cx="64.0" cy="47.0" r="2.7"/><circle cx="64.0" cy="33.0" r="2.7"/><circle cx="67.9" cy="40.2" r="2.7"/><circle cx="71.6" cy="33.7" r="2.7"/></g>
+        <g fill="#9aa0a8"><circle cx="68.0" cy="54.5" r="2.7"/></g>
+        <g fill="#c62f3a"><circle cx="71.7" cy="48.2" r="2.7"/><circle cx="75.3" cy="42.1" r="2.7"/><circle cx="78.9" cy="36.0" r="2.7"/><circle cx="85.7" cy="39.6" r="2.7"/><circle cx="82.2" cy="45.7" r="2.7"/><circle cx="78.7" cy="51.8" r="2.7"/><circle cx="75.2" cy="57.9" r="2.7"/><circle cx="91.6" cy="44.4" r="2.7"/><circle cx="88.0" cy="50.8" r="2.7"/><circle cx="84.2" cy="57.3" r="2.7"/><circle cx="96.4" cy="50.3" r="2.7"/><circle cx="92.3" cy="57.1" r="2.7"/><circle cx="80.2" cy="64.2" r="2.7"/><circle cx="100.0" cy="57.1" r="2.7"/><circle cx="87.8" cy="64.3" r="2.7"/><circle cx="95.1" cy="64.3" r="2.7"/><circle cx="102.3" cy="64.4" r="2.7"/><circle cx="82.0" cy="72.0" r="2.7"/><circle cx="89.0" cy="72.0" r="2.7"/><circle cx="96.0" cy="72.0" r="2.7"/><circle cx="103.0" cy="72.0" r="2.7"/></g>
+      </g>
+    </svg><span class="loc">Belgrade</span></div>
+    <div class="body"><div class="top"><span class="num">8</span><span class="tag eu">Europe · Politics</span></div>
+      <h3>Student majority takes seats in Serbia</h3>
+      <p>New parliament: Student List 140 of 250, Vučić camp 103</p></div>
   </div>
 
+  <!-- 9 Measles -->
   <div class="card am">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#efe4f5"/>
-      <path d="M6 12 L14 16 L20 13 L27 24 L33 22 L40 36" stroke="#c62f3a" stroke-width="3" fill="none" stroke-linejoin="round"/>
-      <path d="M40 36 L34 34 L39 30 Z" fill="#c62f3a"/><path d="M6 40 H40" stroke="#7a3fa0" stroke-width="2"/></svg>
-    <div class="body"><div class="top"><span class="num">6</span><span class="tag am">US · Markets</span></div>
-      <h3>AI-stock jitters sink Wall Street</h3>
-      <p>S&amp;P 500 −1%, Dow −848 points (−1.6%); Nvidia the main drag</p></div>
-  </div>
-
-  <div class="card am">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#efe4f5"/>
-      <rect x="12" y="12" width="22" height="22" rx="2" fill="#2b2b2b"/><rect x="17" y="17" width="12" height="12" fill="#76b900"/>
-      <path d="M15 12 V7 M21 12 V7 M27 12 V7 M31 12 V7 M15 34 V39 M21 34 V39 M27 34 V39 M31 34 V39 M12 15 H7 M12 21 H7 M12 27 H7 M34 15 H39 M34 21 H39 M34 27 H39" stroke="#2b2b2b" stroke-width="2"/></svg>
-    <div class="body"><div class="top"><span class="num">7</span><span class="tag am">US · Tech</span></div>
-      <h3>Nvidia board says no to Jensen Huang's return</h3>
-      <p>First results without him: revenue doubles to $115.8bn</p></div>
-  </div>
-
-  <div class="card am">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#efe4f5"/>
-      <circle cx="23" cy="23" r="10" fill="#c62f3a"/>
-      <g stroke="#c62f3a" stroke-width="2.5"><path d="M23 9 V5 M23 37 V41 M9 23 H5 M37 23 H41 M13 13 L10 10 M33 33 L36 36 M33 13 L36 10 M13 33 L10 36"/></g>
-      <circle cx="20" cy="20" r="2.2" fill="#fff"/><circle cx="26" cy="25" r="1.8" fill="#fff"/></svg>
-    <div class="body"><div class="top"><span class="num">8</span><span class="tag am">Americas · Health</span></div>
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="132" height="90" fill="#f4eef6"/>
+      <rect x="6" y="8" width="36" height="24" fill="#fff"/>
+      <g fill="#c62f3a"><rect x="6" y="8" width="36" height="2.67"/><rect x="6" y="13.33" width="36" height="2.67"/><rect x="6" y="18.67" width="36" height="2.67"/><rect x="6" y="24" width="36" height="2.67"/><rect x="6" y="29.33" width="36" height="2.67"/></g>
+      <rect x="6" y="8" width="16" height="13.3" fill="#1f3c88"/>
+      <rect x="48" y="8" width="12" height="24" fill="#0f7a4a"/><rect x="60" y="8" width="12" height="24" fill="#fff"/><rect x="72" y="8" width="12" height="24" fill="#c62f3a"/>
+      <circle cx="66" cy="20" r="3" fill="#8a5a33"/>
+      <rect x="90" y="8" width="36" height="8" fill="#d52b1e"/><rect x="90" y="16" width="36" height="8" fill="#f9e300"/><rect x="90" y="24" width="36" height="8" fill="#007a3d"/>
+      <g stroke="#c9c2cc" stroke-width="0.6" fill="none"><rect x="6" y="8" width="36" height="24"/><rect x="48" y="8" width="36" height="24"/><rect x="90" y="8" width="36" height="24"/></g>
+      <text x="7" y="58" font-family="Avenir Next Condensed, sans-serif" font-weight="800" font-size="16" fill="#c62f3a">MEASLES</text>
+      <g stroke="#c62f3a" stroke-width="2.2"><line x1="104" y1="48" x2="104" y2="44"/><line x1="104" y1="76" x2="104" y2="80"/><line x1="90" y1="62" x2="86" y2="62"/><line x1="118" y1="62" x2="122" y2="62"/><line x1="94" y1="52" x2="91" y2="49"/><line x1="114" y1="72" x2="117" y2="75"/><line x1="114" y1="52" x2="117" y2="49"/><line x1="94" y1="72" x2="91" y2="75"/></g>
+      <g fill="#c62f3a"><circle cx="104" cy="43" r="2.6"/><circle cx="104" cy="81" r="2.6"/><circle cx="85" cy="62" r="2.6"/><circle cx="123" cy="62" r="2.6"/><circle cx="90.5" cy="48.5" r="2.6"/><circle cx="117.5" cy="75.5" r="2.6"/><circle cx="117.5" cy="48.5" r="2.6"/><circle cx="90.5" cy="75.5" r="2.6"/></g>
+      <circle cx="104" cy="62" r="14" fill="#c62f3a"/>
+      <circle cx="99" cy="57" r="3" fill="#f3b3b8"/><circle cx="108" cy="66" r="2.4" fill="#f3b3b8"/><circle cx="108" cy="56" r="1.6" fill="#f3b3b8"/>
+    </svg><span class="loc">The Americas</span></div>
+    <div class="body"><div class="top"><span class="num">9</span><span class="tag am">Americas · Health</span></div>
       <h3>US and Mexico lose measles-free status</h3>
-      <p>PAHO ruling also covers Bolivia; US had the status 26 years</p></div>
+      <p>PAHO also names Bolivia; US had the status 26 years</p></div>
   </div>
 
+  <!-- 10 Nvidia / Wall St -->
+  <div class="card am">
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="132" height="90" fill="#0f1b2d"/>
+      <g stroke="#24344d" stroke-width="0.8"><line x1="0" y1="30" x2="132" y2="30"/><line x1="0" y1="46" x2="132" y2="46"/><line x1="0" y1="62" x2="132" y2="62"/></g>
+      <g font-family="Avenir Next Condensed, sans-serif" font-weight="800">
+        <text x="6" y="13" font-size="10" fill="#76b900">NVIDIA</text>
+        <text x="57" y="22" font-size="8.5" fill="#b6e35a" text-anchor="middle">$115.8bn</text>
+        <text x="103" y="13" font-size="10" fill="#ff6b6b" text-anchor="middle">DOW −848</text>
+      </g>
+      <g fill="#76b900"><rect x="10" y="56" width="10" height="20"/><rect x="24" y="48" width="10" height="28"/><rect x="38" y="38" width="10" height="38"/><rect x="52" y="26" width="10" height="50"/></g>
+      <line x1="72" y1="20" x2="72" y2="78" stroke="#3a4a63" stroke-width="1"/>
+      <path d="M78 24 L87 31 L95 27 L104 44 L112 40 L121 60" stroke="#ff4d4d" stroke-width="2.6" fill="none" stroke-linejoin="round"/>
+      <path d="M126 68 L116 63 L124 56 Z" fill="#ff4d4d"/>
+    </svg><span class="loc">Wall Street</span></div>
+    <div class="body"><div class="top"><span class="num">10</span><span class="tag am">US · Business</span></div>
+      <h3>Nvidia board rejects Huang's return as CEO</h3>
+      <p>Revenue doubles to $115.8bn; Dow −848 on AI jitters</p></div>
+  </div>
+
+  <!-- 11 Mongolia -->
+  <div class="card as">
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="132" height="90" fill="#bfe0f2"/>
+      <path d="M0 50 Q30 36 60 46 T132 40 V90 H0 Z" fill="#a8b86a"/>
+      <path d="M0 62 Q50 54 132 60 V90 H0 Z" fill="#c9b77a"/>
+      <line x1="20" y1="8" x2="20" y2="62" stroke="#555" stroke-width="1.3"/>
+      <rect x="21" y="9" width="11" height="19" fill="#c4272f"/><rect x="32" y="9" width="11" height="19" fill="#015197"/><rect x="43" y="9" width="11" height="19" fill="#c4272f"/>
+      <circle cx="26.5" cy="13.5" r="1.7" fill="#f9cf02"/><rect x="25" y="16.5" width="3" height="8" fill="#f9cf02"/>
+      <path d="M62 53 Q80 36 98 53 Z" fill="#f7f4ec" stroke="#8a7a5a" stroke-width="0.8"/>
+      <rect x="65" y="52" width="30" height="12" fill="#f7f4ec" stroke="#8a7a5a" stroke-width="0.8"/>
+      <circle cx="80" cy="42" r="2" fill="#8a7a5a"/>
+      <path d="M65 55.5 H76 M84 55.5 H95" stroke="#2f5fb3" stroke-width="1.2"/>
+      <rect x="76" y="55" width="8" height="9" fill="#d0352f"/>
+      <path d="M0 76 H132" stroke="#5a4a3a" stroke-width="1.6"/>
+      <g fill="#2f5fb3"><rect x="100" y="64" width="28" height="10" rx="1"/><rect x="72" y="66" width="26" height="8"/></g>
+      <rect x="120" y="60" width="6" height="5" fill="#2f5fb3"/>
+      <g fill="#cfe6f5"><rect x="104" y="66" width="5" height="3"/><rect x="112" y="66" width="5" height="3"/><rect x="76" y="68" width="5" height="3"/><rect x="85" y="68" width="5" height="3"/></g>
+      <g fill="#11151c"><circle cx="106" cy="75" r="2"/><circle cx="122" cy="75" r="2"/><circle cx="78" cy="75" r="2"/><circle cx="92" cy="75" r="2"/></g>
+    </svg><span class="loc">Mongolia</span></div>
+    <div class="body"><div class="top"><span class="num">11</span><span class="tag as">Asia · Politics</span></div>
+      <h3>Mongolia's president says he will resign</h3>
+      <p>Ex-mayor alleges $25m railway bribe; he denies it</p></div>
+  </div>
+
+  <!-- 12 COP31 -->
   <div class="card gl">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#e3e7ec"/>
-      <circle cx="21" cy="24" r="15" fill="#3d8fd0"/><path d="M11 18 q6 -4 10 2 q2 6 -4 8 q-4 2 -4 8" fill="#3aa35a"/><path d="M26 13 q6 4 4 10 q-4 2 -6 -3 z" fill="#3aa35a"/>
-      <rect x="35" y="7" width="6" height="24" rx="3" fill="#fff" stroke="#c62f3a" stroke-width="1.5"/><circle cx="38" cy="33" r="4.5" fill="#c62f3a"/><rect x="37" y="15" width="2" height="16" fill="#c62f3a"/></svg>
-    <div class="body"><div class="top"><span class="num">9</span><span class="tag gl">Climate · COP31</span></div>
-      <h3>Rows over draft deal at COP31 in Antalya</h3>
-      <p>EU envoy says the text could make talks "untenable"</p></div>
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="132" height="90" fill="#fde3c4"/>
+      <circle cx="40" cy="44" r="31" fill="none" stroke="#f08a3c" stroke-width="4" opacity="0.45"/>
+      <circle cx="40" cy="44" r="26" fill="#3d8fd0"/>
+      <path d="M22 30 Q30 24 38 30 Q42 38 34 42 Q28 46 30 56 Q22 50 20 42 Z" fill="#3aa35a"/>
+      <path d="M46 22 Q58 26 60 38 Q54 42 50 36 Q44 30 46 22 Z" fill="#3aa35a"/>
+      <path d="M46 52 Q54 50 56 58 Q50 66 44 62 Z" fill="#3aa35a"/>
+      <rect x="78" y="10" width="46" height="62" fill="#fff" stroke="#9a9a9a"/>
+      <text x="101" y="22" font-family="Avenir Next Condensed, sans-serif" font-weight="800" font-size="10" fill="#11151c" text-anchor="middle">DRAFT</text>
+      <g stroke="#b9b9b9" stroke-width="2"><line x1="84" y1="30" x2="118" y2="30"/><line x1="84" y1="37" x2="118" y2="37"/><line x1="84" y1="44" x2="112" y2="44"/><line x1="84" y1="51" x2="118" y2="51"/><line x1="84" y1="58" x2="108" y2="58"/><line x1="84" y1="65" x2="116" y2="65"/></g>
+      <g stroke="#c62f3a" stroke-width="2.2" fill="none" stroke-linecap="round"><path d="M82 37 L120 37"/><path d="M82 51 L120 51"/><path d="M84 42 Q96 50 110 40 T120 46"/></g>
+    </svg><span class="loc">Antalya, Türkiye</span></div>
+    <div class="body"><div class="top"><span class="num">12</span><span class="tag gl">Global · Climate</span></div>
+      <h3>Rows over draft deal at COP31 climate talks</h3>
+      <p>EU envoy: the text could make talks "untenable"</p></div>
   </div>
 
+  <!-- 13 Bangladesh -->
   <div class="card as">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#f8e0e2"/>
-      <path d="M6 37 H40" stroke="#555" stroke-width="2"/>
-      <path d="M8 12 L30 25 L33 21 L36 30 L27 30 L29 27 Z" fill="#555"/><path d="M17 16 L21 10 L25 20 Z" fill="#555"/>
-      <circle cx="33" cy="33" r="5" fill="#ff7b22"/><circle cx="37" cy="27" r="3" fill="#888"/><circle cx="40" cy="22" r="2.4" fill="#aaa"/></svg>
-    <div class="body"><div class="top"><span class="num">10</span><span class="tag as">Russia · Siberia</span></div>
-      <h3>Military plane crash kills 19</h3>
-      <p>A Russian military cargo plane went down in Siberia</p></div>
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="132" height="90" fill="#aebccb"/>
+      <path d="M46 46 V22 L58 14 V22 L70 14 V22 L82 14 V22 L94 14 V46 Z" fill="#7e8c9a"/>
+      <rect x="100" y="4" width="6" height="42" fill="#5f6b77"/>
+      <g fill="#b9c6d2"><rect x="50" y="28" width="8" height="5"/><rect x="62" y="28" width="8" height="5"/><rect x="74" y="28" width="8" height="5"/><rect x="86" y="28" width="5" height="5"/></g>
+      <rect y="45" width="132" height="45" fill="#c8b9a0"/>
+      <g fill="#f4f4f4" opacity="0.9"><circle cx="62" cy="50" r="9"/><circle cx="74" cy="44" r="10"/><circle cx="86" cy="52" r="8"/><circle cx="52" cy="58" r="6"/><circle cx="70" cy="56" r="7"/></g>
+      <path d="M108 56 Q92 30 76 46" stroke="#555" stroke-width="0.9" stroke-dasharray="2 1.6" fill="none"/>
+      <g stroke="#5a4a3a" stroke-width="1.2"><line x1="10" y1="40" x2="10" y2="58"/><line x1="46" y1="40" x2="46" y2="58"/></g>
+      <rect x="8" y="34" width="40" height="11" fill="#c62f3a"/>
+      <text x="28" y="42.6" font-family="Avenir Next Condensed, sans-serif" font-weight="800" font-size="8.5" fill="#fff" text-anchor="middle">TK 30,000</text>
+      <g fill="#6b4a33"><circle cx="8" cy="52" r="3.4"/><circle cx="18" cy="50" r="3.4"/><circle cx="28" cy="53" r="3.4"/><circle cx="38" cy="50" r="3.4"/><circle cx="48" cy="54" r="3.4"/></g>
+      <rect x="4" y="56" width="8" height="16" rx="2" fill="#d63d7a"/><rect x="14" y="54" width="8" height="18" rx="2" fill="#14919b"/>
+      <rect x="24" y="57" width="8" height="15" rx="2" fill="#f2b134"/><rect x="34" y="54" width="8" height="18" rx="2" fill="#7a3fa0"/><rect x="44" y="58" width="8" height="14" rx="2" fill="#2e8b57"/>
+      <g fill="#1f2e4d"><circle cx="104" cy="52" r="3.6"/><circle cx="116" cy="50" r="3.6"/><circle cx="127" cy="53" r="3.6"/>
+        <rect x="100" y="56" width="8" height="18" rx="2"/><rect x="112" y="54" width="8" height="20" rx="2"/><rect x="123" y="57" width="8" height="17" rx="2"/></g>
+      <g fill="#cfd6de" stroke="#8a95a3" stroke-width="0.6"><rect x="96" y="56" width="6" height="16" rx="1"/><rect x="108" y="54" width="6" height="16" rx="1"/><rect x="119" y="57" width="6" height="16" rx="1"/></g>
+    </svg><span class="loc">Gazipur, Bangladesh</span></div>
+    <div class="body"><div class="top"><span class="num">13</span><span class="tag as">Asia · Labour</span></div>
+      <h3>Police tear-gas garment workers near Dhaka</h3>
+      <p>They want Tk30,000 a month; 57 Gazipur factories shut</p></div>
   </div>
 
-  <div class="card eu">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#e0e8f6"/>
-      <rect x="9" y="8" width="28" height="16" fill="#fff" stroke="#2f5fb3" stroke-width="2"/>
-      <path d="M14 14 H32 M14 19 H27" stroke="#c62f3a" stroke-width="2.5"/>
-      <path d="M23 24 V33" stroke="#2f5fb3" stroke-width="3"/>
-      <circle cx="12" cy="36" r="4" fill="#2f5fb3"/><circle cx="23" cy="38" r="4" fill="#2f5fb3"/><circle cx="34" cy="36" r="4" fill="#2f5fb3"/></svg>
-    <div class="body"><div class="top"><span class="num">11</span><span class="tag eu">France</span></div>
-      <h3>Over 100,000 march for better pay</h3>
-      <p>146,000 by government count; CGT union says 500,000+</p></div>
+  <!-- 14 Sudan -->
+  <div class="card af">
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="132" height="90" fill="#f3d9a4"/>
+      <path d="M0 58 Q60 50 132 60 V90 H0 Z" fill="#d9a85e"/>
+      <g fill="#2b2b33" opacity="0.88"><circle cx="100" cy="44" r="7"/><circle cx="104" cy="34" r="8"/><circle cx="110" cy="23" r="8"/><circle cx="118" cy="13" r="7"/></g>
+      <rect x="12" y="56" width="20" height="13" fill="#a8693a"/><path d="M9 57 L22 43 L35 57 Z" fill="#c9a050"/>
+      <rect x="44" y="54" width="20" height="13" fill="#a8693a"/><path d="M41 55 L54 41 L67 55 Z" fill="#c9a050"/>
+      <rect x="88" y="56" width="20" height="13" fill="#8a5530"/><path d="M85 57 L98 46 L111 57 Z" fill="#6e5a3a"/>
+      <path d="M90 57 Q94 42 98 52 Q102 40 106 57 Z" fill="#ff7b22"/><path d="M94 57 Q97 48 100 57 Z" fill="#ffd25a"/>
+      <path d="M58 20 L90 48" stroke="#7a1f1f" stroke-width="1" stroke-dasharray="2.4 2"/>
+      <g fill="#11151c"><ellipse cx="46" cy="16" rx="14" ry="2.2"/><path d="M48 16 L42 5 H47 L55 16 L47 27 H42 Z"/><path d="M34 16 L31 11 H34 L37 16 L34 21 H31 Z"/></g>
+    </svg><span class="loc">Sudan</span></div>
+    <div class="body"><div class="top"><span class="num">14</span><span class="tag af">Africa · War</span></div>
+      <h3>Sudan: UN counts 2,230 civilian deaths</h3>
+      <p>This year's toll; over 1,630 died in drone strikes</p></div>
   </div>
 
+  <!-- 15 Siberia crash -->
   <div class="card as">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#f8e0e2"/>
-      <path d="M8 20 L20 8 L38 8 L38 26 L26 38 Z" fill="#fff" stroke="#c62f3a" stroke-width="2"/>
-      <circle cx="31" cy="15" r="2.5" fill="#c62f3a"/>
-      <path d="M20 17 V30 M15 25 L20 31 L25 25" stroke="#11151c" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
-    <div class="body"><div class="top"><span class="num">12</span><span class="tag as">China · Canada</span></div>
-      <h3>Xi and Carney agree more tariff cuts</h3>
-      <p>China eases duties on ~$280m of Canadian goods</p></div>
-  </div>
-
-  <div class="card af">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#dff0e6"/>
-      <path d="M23 8 V36" stroke="#2e8b57" stroke-width="2.5"/><path d="M10 14 H36" stroke="#2e8b57" stroke-width="2.5"/>
-      <path d="M10 14 L5 26 H15 Z M36 14 L31 26 H41 Z" fill="#2e8b57"/><rect x="15" y="36" width="16" height="4" fill="#2e8b57"/></svg>
-    <div class="body"><div class="top"><span class="num">13</span><span class="tag af">Mozambique</span></div>
-      <h3>Opposition leader Mondlane goes on trial</h3>
-      <p>Terrorism charges over post-election protests</p></div>
-  </div>
-
-  <div class="card af">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#dff0e6"/>
-      <path d="M23 12 L30 18 L23 21 L16 18 Z" fill="#11151c"/><path d="M8 18 H38" stroke="#11151c" stroke-width="2"/>
-      <circle cx="9" cy="18" r="3" fill="none" stroke="#11151c"/><circle cx="37" cy="18" r="3" fill="none" stroke="#11151c"/>
-      <path d="M12 37 L16 29 L20 37 Z M22 37 L27 27 L32 37 Z" fill="#2e8b57"/></svg>
-    <div class="body"><div class="top"><span class="num">14</span><span class="tag af">Sudan</span></div>
-      <h3>UN: 2,230 civilians killed this year</h3>
-      <p>More than 1,630 of them died in drone strikes</p></div>
-  </div>
-
-  <div class="card eu">
-    <svg viewBox="0 0 46 46"><rect width="46" height="46" rx="6" fill="#e0e8f6"/>
-      <rect x="7" y="10" width="32" height="22" rx="2" fill="#2f5fb3"/><rect x="10" y="13" width="26" height="16" fill="#cfd8e8"/>
-      <path d="M13 15 L33 27 M33 15 L13 27" stroke="#c62f3a" stroke-width="3"/>
-      <path d="M17 38 H29 M23 32 V38" stroke="#2f5fb3" stroke-width="2.5"/></svg>
-    <div class="body"><div class="top"><span class="num">15</span><span class="tag eu">Türkiye</span></div>
-      <h3>Opposition channel Sözcü TV seized</h3>
-      <p>Istanbul HQ raided; station handed to a trustee</p></div>
+    <div class="pic"><svg viewBox="0 0 132 90" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="132" height="90" fill="#c9d3dc"/>
+      <g fill="#7f8c96"><path d="M30 50 L36 34 L42 50 Z"/><path d="M60 48 L65 36 L70 48 Z"/><path d="M96 50 L101 36 L106 50 Z"/></g>
+      <path d="M0 54 Q60 46 132 56 V90 H0 Z" fill="#f4f7fa"/>
+      <g fill="#24412f"><path d="M2 56 L9 30 L16 56 Z"/><path d="M12 58 L19 36 L26 58 Z"/><path d="M112 58 L119 32 L126 58 Z"/><path d="M122 60 L128 40 L134 60 Z"/></g>
+      <g fill="#2b2b33" opacity="0.88"><circle cx="76" cy="54" r="6"/><circle cx="80" cy="44" r="8"/><circle cx="86" cy="32" r="9"/><circle cx="94" cy="20" r="9"/><circle cx="102" cy="10" r="8"/></g>
+      <path d="M30 68 L70 60 L72 66 L32 74 Z" fill="#8a949c"/>
+      <path d="M30 68 Q22 72 32 74 Z" fill="#6c757d"/>
+      <path d="M42 63 L62 52 L68 54 L52 65 Z" fill="#5e676e"/>
+      <g fill="#4a5258"><ellipse cx="52" cy="60" rx="3.5" ry="1.6"/><ellipse cx="60" cy="56" rx="3.5" ry="1.6"/></g>
+      <path d="M86 66 L106 62 L107 67 L87 70 Z" fill="#8a949c"/>
+      <path d="M100 63 L109 47 L113 48 L107 63 Z" fill="#6c757d"/>
+      <path d="M108 51 l1 2.3 l2.4 0.2 l-1.9 1.5 l0.7 2.4 l-2.2 -1.4 l-2.1 1.4 l0.7 -2.4 l-1.9 -1.5 l2.4 -0.2 z" fill="#c62f3a"/>
+      <path d="M70 66 Q74 54 78 62 Q81 52 86 66 Z" fill="#ff7b22"/><path d="M74 66 Q77 58 80 66 Z" fill="#ffd25a"/>
+      <g fill="#fff"><circle cx="20" cy="12" r="1"/><circle cx="44" cy="20" r="1"/><circle cx="64" cy="8" r="1"/><circle cx="12" cy="26" r="1"/><circle cx="120" cy="22" r="1"/><circle cx="54" cy="34" r="1"/></g>
+    </svg><span class="loc">Siberia</span></div>
+    <div class="body"><div class="top"><span class="num">15</span><span class="tag as">Russia · Air crash</span></div>
+      <h3>Military plane crash in Siberia kills 19</h3>
+      <p>A Russian military cargo plane went down</p></div>
   </div>
 
 </section>
 
 <!-- ============ MAP ============ -->
 <section class="map">
-  <svg viewBox="0 0 420 212" width="420" height="212" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 420 200" width="262" height="125" xmlns="http://www.w3.org/2000/svg">
     <!-- equirectangular: x = (lon+170)*1.1667, y = (80-lat)*1.4 + 4 -->
     <!-- equator -->
     <line x1="0" y1="116" x2="420" y2="116" stroke="#c3d2de" stroke-width="0.8" stroke-dasharray="4 3"/>
@@ -501,41 +664,43 @@
       <path d="M231 54.4 L233.3 51.6 L236.8 51.6 L239.2 53 L242.7 50.2 L246.3 57.2 L240.3 57.9 L234.5 58.6 L231 57.2 Z"/>
       <path d="M253.7 53 L258.3 50.2 L261.8 58.6 L259.5 64.2 L256 62.8 L253.7 55.8 Z"/>
     </g>
-    <g font-family="Avenir Next Condensed, sans-serif" font-weight="800" font-size="9" text-anchor="middle">
+    <g font-family="Avenir Next Condensed, sans-serif" font-weight="800" font-size="11" text-anchor="middle">
       <!-- exact spots + leader lines to offset pins in the crowded Europe / Middle East area -->
       <g stroke="#11151c" stroke-width="0.9">
-        <line x1="241" y1="52.6" x2="252" y2="38"/>
-        <line x1="232.2" y1="58.6" x2="222" y2="40"/>
-        <line x1="234.1" y1="64.3" x2="213" y2="70"/>
-        <line x1="239.4" y1="71.5" x2="225" y2="84"/>
-        <line x1="264.3" y1="78.9" x2="278" y2="70"/>
-        <line x1="331.4" y1="84.5" x2="321" y2="76"/>
+        <line x1="241" y1="52.6" x2="256" y2="38"/>
+        <line x1="233.9" y1="45.4" x2="234" y2="26"/>
+        <line x1="222.2" y1="53.3" x2="206" y2="42"/>
+        <line x1="234.1" y1="64.3" x2="206" y2="62"/>
+        <line x1="238.8" y1="71.9" x2="218" y2="82"/>
+        <line x1="239.6" y1="71.5" x2="258" y2="58"/>
+        <line x1="264.3" y1="78.9" x2="280" y2="72"/>
+        <line x1="327.6" y1="95.6" x2="341" y2="98"/>
       </g>
       <g fill="#11151c">
-        <circle cx="241" cy="52.6" r="1.8"/><circle cx="232.2" cy="58.6" r="1.8"/><circle cx="234.1" cy="64.3" r="1.8"/>
-        <circle cx="239.4" cy="71.5" r="1.8"/><circle cx="264.3" cy="78.9" r="1.8"/><circle cx="331.4" cy="84.5" r="1.8"/>
+        <circle cx="241" cy="52.6" r="1.8"/><circle cx="233.9" cy="45.4" r="1.8"/><circle cx="222.2" cy="53.3" r="1.8"/><circle cx="234.1" cy="64.3" r="1.8"/>
+        <circle cx="238.8" cy="71.9" r="1.8"/><circle cx="264.3" cy="78.9" r="1.8"/><circle cx="327.6" cy="95.6" r="1.8"/>
       </g>
-      <circle cx="252" cy="38" r="7" fill="#2f5fb3"/><text x="252" y="41.2" fill="#fff">1</text>
-      <circle cx="278" cy="70" r="7" fill="#d9661f"/><text x="278" y="73.2" fill="#fff">2</text>
-      <circle cx="339.5" cy="95.6" r="7" fill="#c62f3a"/><text x="339.5" y="98.8" fill="#fff">3</text>
-      <circle cx="225" cy="84" r="7" fill="#d9661f"/><text x="225" y="87.2" fill="#fff">4</text>
-      <circle cx="323" cy="49" r="7" fill="#c62f3a"/><text x="323" y="52.2" fill="#fff">5</text>
-      <circle cx="112" cy="59" r="7" fill="#7a3fa0"/><text x="112" y="62.2" fill="#fff">6</text>
-      <circle cx="56" cy="63.6" r="7" fill="#7a3fa0"/><text x="56" y="66.8" fill="#fff">7</text>
-      <circle cx="82.8" cy="88.8" r="7" fill="#7a3fa0"/><text x="82.8" y="92" fill="#fff">8</text>
-      <circle cx="213" cy="70" r="7" fill="#556070"/><text x="213" y="73.2" fill="#fff">9</text>
-      <circle cx="315" cy="30" r="7" fill="#c62f3a"/><text x="315" y="33.2" fill="#fff">10</text>
-      <circle cx="201" cy="47.6" r="7" fill="#2f5fb3"/><text x="201" y="50.8" fill="#fff">11</text>
-      <circle cx="321" cy="76" r="7" fill="#c62f3a"/><text x="321" y="79.2" fill="#fff">12</text>
-      <circle cx="236.4" cy="152.3" r="7" fill="#2e8b57"/><text x="236.4" y="155.5" fill="#fff">13</text>
-      <circle cx="236.3" cy="94.2" r="7" fill="#2e8b57"/><text x="236.3" y="97.4" fill="#fff">14</text>
-      <circle cx="222" cy="40" r="7" fill="#2f5fb3"/><text x="222" y="43.2" fill="#fff">15</text>
+      <circle cx="256" cy="38" r="9" fill="#2f5fb3"/><text x="256" y="41.2" fill="#fff">1</text>
+      <circle cx="280" cy="72" r="9" fill="#d9661f"/><text x="280" y="75.2" fill="#fff">2</text>
+      <circle cx="341" cy="98" r="9" fill="#c62f3a"/><text x="341" y="101.2" fill="#fff">3</text>
+      <circle cx="233.3" cy="113.9" r="9" fill="#2e8b57"/><text x="233.3" y="117.1" fill="#fff">4</text>
+      <circle cx="234" cy="26" r="9" fill="#2f5fb3"/><text x="234" y="29.2" fill="#fff">5</text>
+      <circle cx="218" cy="82" r="9" fill="#d9661f"/><text x="218" y="85.2" fill="#fff">6</text>
+      <circle cx="258" cy="58" r="9" fill="#d9661f"/><text x="258" y="61.2" fill="#fff">7</text>
+      <circle cx="206" cy="42" r="9" fill="#2f5fb3"/><text x="206" y="45.2" fill="#fff">8</text>
+      <circle cx="82.8" cy="88.8" r="9" fill="#7a3fa0"/><text x="82.8" y="92" fill="#fff">9</text>
+      <circle cx="112" cy="59" r="9" fill="#7a3fa0"/><text x="112" y="62.2" fill="#fff">10</text>
+      <circle cx="323" cy="49" r="9" fill="#c62f3a"/><text x="323" y="52.2" fill="#fff">11</text>
+      <circle cx="206" cy="62" r="9" fill="#556070"/><text x="206" y="65.2" fill="#fff">12</text>
+      <circle cx="303.8" cy="82.4" r="9" fill="#c62f3a"/><text x="303.8" y="85.6" fill="#fff">13</text>
+      <circle cx="236.3" cy="94.2" r="9" fill="#2e8b57"/><text x="236.3" y="97.4" fill="#fff">14</text>
+      <circle cx="315" cy="30" r="9" fill="#c62f3a"/><text x="315" y="33.2" fill="#fff">15</text>
       <!-- Port Moresby -> Auckland flights -->
       <path d="M369.4 129.7 Q396 140 407.5 168.7" stroke="#14919b" stroke-width="1.4" stroke-dasharray="3 2" fill="none"/>
       <circle cx="369.4" cy="129.7" r="2.6" fill="#14919b"/><circle cx="407.5" cy="168.7" r="2.6" fill="#14919b"/>
     </g>
-    <text x="6" y="206" font-family="Avenir Next Condensed, sans-serif" font-weight="700" font-size="10" fill="#4a5360">Pins match story numbers · dashed line: PNG–Auckland flights return</text>
   </svg>
+  <div class="cap">Pins match story numbers · dashed line: Port Moresby–Auckland flights resume</div>
 </section>
 
 <!-- ============ ALSO ON ============ -->
@@ -543,30 +708,37 @@
   <h4>Also on 17 November</h4>
   <ul>
     <li style="--c:var(--eu)"><b>Ukraine:</b> new peace talks with US envoys</li>
-    <li style="--c:var(--am)"><b>US Navy pick:</b> Iran war is straining the fleet</li>
-    <li style="--c:var(--am)"><b>NSA</b> classified network down; "maintenance"</li>
-    <li style="--c:var(--am)"><b>US</b> seeks $50bn air-traffic fix after FAA halt</li>
-    <li style="--c:var(--am)"><b>Waymo</b> halts freeway rides after California ban</li>
-    <li style="--c:var(--am)"><b>California</b> sues OpenAI over AI safeguards</li>
-    <li style="--c:var(--gl)"><b>US</b> licence rule for foreign AI data centres</li>
-    <li style="--c:var(--gl)"><b>Geneva:</b> 128 states debate killer-robot rules</li>
-    <li style="--c:var(--gl)"><b>Study:</b> big US data centres emit 25.7m t CO₂</li>
+    <li style="--c:var(--eu)"><b>France:</b> 146,000 march for pay (govt count)</li>
+    <li style="--c:var(--eu)"><b>Türkiye</b> seizes opposition channel Sözcü TV</li>
+    <li style="--c:var(--eu)"><b>Russia</b> warns UK against G20 ban on Putin</li>
+    <li style="--c:var(--eu)"><b>5 EU states</b> plan deportation hub in Rwanda</li>
     <li style="--c:var(--eu)"><b>UK</b> sanctions 8 Israeli settlement builders</li>
-    <li style="--c:var(--me)"><b>West Bank:</b> settlers kill woman, 72, officials say</li>
+    <li style="--c:var(--me)"><b>West Bank:</b> settlers kill woman, 72, PA says</li>
+    <li style="--c:var(--eu)"><b>Austria</b> probe may strip Kneissl's citizenship</li>
+    <li style="--c:var(--as)"><b>Xi and Carney</b> agree more tariff cuts</li>
+    <li style="--c:var(--as)"><b>ASEAN:</b> Philippines hands chair to Singapore</li>
+    <li style="--c:var(--as)"><b>S. China Sea</b> code "85–90%" agreed: Marcos</li>
+    <li style="--c:var(--as)"><b>Trump</b> says he may meet Kim Jong Un</li>
+    <li style="--c:var(--oc)"><b>PNG</b> defends closing Taiwan's office</li>
+    <li style="--c:var(--oc)"><b>Air Niugini</b> back in Auckland after 26 years</li>
+    <li style="--c:var(--af)"><b>Mozambique:</b> Mondlane on trial for terrorism</li>
     <li style="--c:var(--af)"><b>South Africa:</b> two mass shootings kill 17</li>
     <li style="--c:var(--af)"><b>Guinea</b> arrests 1,263 suspected gold miners</li>
     <li style="--c:var(--af)"><b>EU</b> keeps air bans on 12 African countries</li>
-    <li style="--c:var(--af)"><b>Film:</b> Mo Abudu launches $50m African fund</li>
+    <li style="--c:var(--af)"><b>AFCON qualifier:</b> Ethiopia 1–0 Mozambique</li>
+    <li style="--c:var(--am)"><b>US Navy pick:</b> Iran war strains the fleet</li>
+    <li style="--c:var(--am)"><b>US</b> seeks $50bn air-traffic fix after FAA halt</li>
     <li style="--c:var(--am)"><b>Ecuador</b> fishermen sue US over boat strike</li>
     <li style="--c:var(--am)"><b>Haiti:</b> rallies for El Salvador troop mission</li>
-    <li style="--c:var(--am)"><b>New York</b> mayor disbands NYPD protest unit</li>
-    <li style="--c:var(--oc)"><b>Pacific:</b> Air Niugini back in Auckland after 26 yrs</li>
-    <li style="--c:var(--af)"><b>AFCON qualifier:</b> Ethiopia 1–0 Mozambique</li>
+    <li style="--c:var(--gl)"><b>US</b> licence rule for foreign AI data centres</li>
+    <li style="--c:var(--gl)"><b>Geneva:</b> 128 states debate killer-robot rules</li>
+    <li style="--c:var(--gl)"><b>Study:</b> big US data centres emit 25.7m t CO₂</li>
+    <li style="--c:var(--gl)"><b>Cambridge</b> word of the year: "human"</li>
   </ul>
 </section>
 
 <footer>
-  <span>Sources: AP, Reuters, BBC, Al Jazeera, Euronews, NYT, Democracy Now!, OkayAfrica, RNZ. Claims by parties to a conflict are attributed.</span>
+  <span>Sources: AP, Reuters, AFP, BBC, WHO, Al Jazeera, Kyiv Independent, Balkan Insight, TBS News, NYT, Democracy Now!, allAfrica, GMA, RNZ. Claims by parties to a conflict are attributed.</span>
   <span>Illustrations: original drawings</span>
 </footer>
 
